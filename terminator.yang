@@ -54,7 +54,7 @@ module terminator {
 					type boolean;
 					default "true";
 					description
-						"Character is good or bad";
+						"Character is good";
 				}
 					
 			}
