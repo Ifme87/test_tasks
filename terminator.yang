@@ -1,0 +1,87 @@
+module terminator {
+	yang-version 1.1;
+
+	namespace
+	  "http://cinema.com.au/ns/yang/terminator";
+
+	prefix tm;
+
+	organization
+	  "Skynet";
+
+	contact
+	  "Support: <https://sara.connor/contact/>";
+
+	description
+	  "This YANG module has been created for the test task.
+	   It defines the model for Terminator movie";
+
+	revision "2021-11-01" {
+	  description
+		"Initial Revision";
+	  reference
+		"Test YANG";
+	}
+	
+	typedef release-year {
+		type uint16 {
+			range "0..2030";
+		}
+		description 
+			"Release year represents movie realease year";
+	}
+	
+	container movie-data {
+		container characters {
+			list character {
+				key "name";
+				leaf name {
+					type string;
+					mandatory "true";
+					description
+						"Name of character. Example: John Connor";
+				}
+				leaf nature {
+					type enumeration {
+						enum human;
+						enum machine;
+					}
+					mandatory "true";
+					description
+						"Is it human or machine";
+				}
+				leaf goodness {
+					type boolean;
+					default "true";
+					description
+						"Character is good or bad";
+				}
+					
+			}
+		}
+		
+		container movie-info {
+			list movie-fact {
+				config false;
+				key "title";
+				leaf title {
+					type string;
+					description
+						"Movie title";
+				}
+				leaf year {
+					type release-year;
+					mandatory "true";
+					description
+						"Release year";
+				}
+				leaf director {
+					type string;
+					mandatory "true";
+					description 
+						"Movie director. Example: James Cameron";
+				}
+			}
+		}
+	}
+}

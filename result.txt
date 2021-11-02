@@ -1,0 +1,20 @@
+ASR 9000 12-port 100GE Consumption Model Line Card, 62.157.222.248/Rack 0/Rack 0-Line Card Slot 1
+    HundredGigE0/1/0/1, up, 4693f4d6-61bc-4b14-879f-fd9821d7950e
+    HundredGigE0/1/0/9, up, 1412d81b-c9b0-47a2-b656-dfde3ba64e21
+    HundredGigE0/1/0/2, up, 71ae27ef-b7f9-476f-8264-f30958bf35b3
+    HundredGigE0/1/0/0, up, 996ca64d-cb59-4759-9d3d-f132cd9cbf2e
+
+ASR 9000 12-port 100GE Consumption Model Line Card, 62.157.222.248/Rack 0/Rack 0-Line Card Slot 0
+    HundredGigE0/0/0/9, up, 690e7264-7c9d-44e6-95d9-b14764acd6c9
+    HundredGigE0/0/0/1, up, 49c04114-3411-4935-b844-4f1017714ee5
+
+ASR 99 Route Processor for Service Edge, 62.157.222.248/Rack 0/Rack 0-RouteProcessor Slot 1
+    MgmtEth0/RP1/CPU0/0, up, aed81da7-8b64-403b-8a0f-db4da0cdb16c
+
+ASR 99 Route Processor for Service Edge, 62.157.222.248/Rack 0/Rack 0-RouteProcessor Slot 0
+    MgmtEth0/RP0/CPU0/0, up, 3d037c84-a9e2-42a4-aed6-dde4359d8943
+
+ASR 9900 8-port 100GE LC -TR OTN, 62.157.222.248/Rack 0/Rack 0-Line Card Slot 2
+    TenGigE0/2/0/1/0, up, d6b7be76-e884-49bc-962e-3cda1ee141fa
+    TenGigE0/2/0/0/1, up, 2e30cb75-083e-4350-bc51-ed62bb4bb233
+
