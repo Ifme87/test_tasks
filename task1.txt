@@ -1,6 +1,6 @@
 FOR service IN services
     LET name = service.serviceModel.serviceSpecification.name
-    LET domain = service.serviceModel.serviceCharacteristic[1].value.e2e-client-service.domain-client-service[0]
+    LET domain = service.serviceModel.serviceCharacteristic[1].value.`e2e-client-service`.`domain-client-service`[0]
     FILTER name == "otn-trunk-cfs"
     FILTER domain.domain == "Ciena"
-        RETURN {lbz: domain.lbz, rfs_id: domain.rfs-id, operational_state: domain.operational-state, user_label: domain.user-label}
+        RETURN {lbz: domain.lbz, rfs_id: domain.`rfs-id`, operational_state: domain.`operational-state`, user_label: domain.`user-label`}
