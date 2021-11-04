@@ -4,7 +4,7 @@ module terminator {
 	namespace
 	  "http://cinema.com.au/ns/yang/terminator";
 
-	prefix tm;
+	prefix terminator;
 
 	organization
 	  "Skynet";
@@ -32,56 +32,52 @@ module terminator {
 	}
 	
 	container movie-data {
-		container characters {
-			list character {
-				key "name";
-				leaf name {
-					type string;
-					mandatory "true";
-					description
-						"Name of character. Example: John Connor";
-				}
-				leaf nature {
-					type enumeration {
-						enum human;
-						enum machine;
-					}
-					mandatory "true";
-					description
-						"Is it human or machine";
-				}
-				leaf goodness {
-					type boolean;
-					default "true";
-					description
-						"Character is good";
-				}
-					
-			}
+		config false;
+		leaf title {
+			type string;
+			description
+				"Movie title";
 		}
-		
-		container movie-info {
-			list movie-fact {
-				config false;
-				key "title";
-				leaf title {
-					type string;
-					description
-						"Movie title";
-				}
-				leaf year {
-					type release-year;
-					mandatory "true";
-					description
-						"Release year";
-				}
-				leaf director {
-					type string;
-					mandatory "true";
-					description 
-						"Movie director. Example: James Cameron";
-				}
+		leaf year {
+			type release-year;
+			mandatory "true";
+			description
+				"Release year";
+		}
+		leaf director {
+			type string;
+			mandatory "true";
+			description 
+				"Movie director. Example: James Cameron";
+		}
+	}
+
+	container characters {
+		list character {
+			config false;
+			key "name";
+			leaf name {
+				type string;
+				mandatory "true";
+				description
+					"Name of character. Example: John Connor";
 			}
+			leaf nature {
+				type enumeration {
+					enum human;
+					enum machine;
+				}
+				mandatory "true";
+				description
+					"Is it human or machine";
+			}
+			leaf positivity {
+				type boolean;
+				default "true";
+				description
+					"Character is positive/negative";
+			}		
 		}
 	}
 }
+		
